@@ -61,3 +61,17 @@ project/
 | **dashboard/** | Includes Power BI reports (`.pbix`) and any supporting dashboard assets. |
 
 [Version-Shield]:https://img.shields.io/badge/Version-1.0-blue
+
+<!--Markdown Links & Images-->
+<!--Url-->
+[Docker-Url]:https://www.docker.com/
+[Apache-Airflow-Url]:https://airflow.apache.org/
+[Python-Url]:https://www.python.org/
+[Postgres-Url]:https://www.postgresql.org/
+[Version-Url]:https://github.com/ibrahimkuranglebih/Football-Data-Pipeline-12-Leagues?tab=readme-ov-file
+<!--Logo-->
+[Docker-Logo]:https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=ffffff
+[Apache-Airflow-Logo]:https://img.shields.io/badge/Apache_Airflow-017CEE?logo=apacheairflow&logoColor=ffffff
+[Python-Logo]:https://img.shields.io/badge/Python-FBEF76?logo=python&logoColor=ffffff
+[Postgres-Logo]:https://img.shields.io/badge/Postgres-4169E1?logo=postgresql&logoColor=ffffff
+[Version-Shield]:https://img.shields.io/badge/Version-1.2-blue
