@@ -48,3 +48,5 @@ CREATE TABLE IF NOT EXISTS stagging.stg_job_types(
 );
 
 CREATE SCHEMA IF NOT EXISTS mart;
+
+CREATE TABLE IF NOT EXISTS mart.
