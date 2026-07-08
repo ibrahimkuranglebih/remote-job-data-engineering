@@ -16,7 +16,7 @@ All of the process was builded by some tech stacks, including
 * [![Python][Python-Logo]][Python-Url]
 * [![Postgres][Postgres-Logo]][Postgres-Url]
 
-<img alt='elt' src='assets/Data-Pipeline-Football.png' />
+<img alt='elt' src='assets/Remote Job Data Engineering Project.png' />
 
 ## 📂 Project Structure
 
