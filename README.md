@@ -39,8 +39,6 @@ project/
 ├── sql/
 │   └── SQL scripts for schema creation, views, stored procedures, and queries.
 │
-├── docker/
-│   └── Dockerfiles and container-related configuration.
 │
 └── dashboard/
     └── Power BI dashboard files and supporting assets.
