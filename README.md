@@ -23,7 +23,7 @@ All of the process was builded by some tech stacks, including
 ```text
 project/
 │
-├── dags/
+├── dag/
 │   └── Apache Airflow DAGs for orchestrating the ETL workflow.
 │
 ├── etl/
