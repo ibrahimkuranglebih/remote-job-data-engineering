@@ -50,12 +50,11 @@ project/
 
 | Directory | Description |
 |-----------|-------------|
-| **dags/** | Contains Apache Airflow DAG definitions used to orchestrate the entire data pipeline. |
+| **dag/** | Contains Apache Airflow DAG definitions used to orchestrate the entire data pipeline. |
 | **etl/extract/** | Retrieves raw data from external APIs and prepares it for ingestion. |
 | **etl/transform/** | Cleans, standardizes, and transforms raw data into targeted form datasets. |
 | **etl/load/** | Loads transformed datasets into the appropriate Data Warehouse schema. |
 | **sql/** | Contains SQL scripts for database creation, schema definitions, views, and ETL queries. |
-| **docker/** | Contains Dockerfiles and Docker Compose configuration for deploying the project environment. |
 | **dashboard/** | Includes Power BI reports (`.pbix`) and any supporting dashboard assets. |
 
 [Version-Shield]:https://img.shields.io/badge/Version-1.0-blue
