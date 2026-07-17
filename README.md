@@ -1,5 +1,6 @@
 # Remote Job Analytics (Data Engineering Project) 
 ![Version][Version-Shield]
+Author
 
 ## Project Overview
 Struggling to find a job will be the most problem for the job seeker, even it's intern or profesional job. From students to experienced worker, they faced the same problem. This project will provide job seeker to analyze the job market and find perfect job for them. 
@@ -16,7 +17,52 @@ All of the process was builded by some tech stacks, including
 * [![Python][Python-Logo]][Python-Url]
 * [![Postgres][Postgres-Logo]][Postgres-Url]
 
+## Data Process Flow
 <img alt='elt' src='assets/Remote Job Data Engineering Project.png' />
+
+## DAG Flow
+<img alt='elt' src='assets/remote_job_data_pipeline-graph.png' />
+
+## Database Schema
+Result from data pipeline will be store in the data warehouse with three different schema. All of them builded with medallion architecture (bronze, silver, and gold) to partitioning the purpose of each schema in data warehouse. There is description of each part of medallion architecture and implementation with the remote jobs data warehouse schema.
+
+| Layer Name | Description | Implementation |
+|-----------|-------------|-------------|
+| 🥉 **Bronze** | Storing raw data in form SQL from transformed API data format | 💾 Stagging Schema |
+| 🥈 **Silver** | Storing cleaned and selected data in form SQL with snowflake schema | 🛒 Mart Schema |
+| 🥇 **Gold** | Storing aggregat data in form SQL which ready to use for analytics and machine learning purpose | 📊 Analytics Schema |
+
+### 💾 Stagging Schema
+Stagging schema consist tables that storing raw data that transformed from API form into SQL form. There is 4 (four) tables in stagging schema. Each table have spesific purpose, especially to transform the stagging data into mart schema. 
+<img alt='elt' src='assets/Stagging Schema.png' />
+
+| Table Name | Description |
+|-----------|-------------|
+| **stg_api_metadata** | Consists metadata of extracted remote job API |
+| **stg_job_industries** | Consists of industry type of job that exracted from API |
+| **stg_job_types** | Consists type of job that extracted from API |
+| **stg_jobs** | Consists Information of remote job that extracted from API |
+
+### 🛒 Mart Schema
+Mart schema consist tables that storing transformed and cleaned data from raw data in stagging schema. This schema is used to store daily data directly with an OLTP approach. This schema also applied snowflake schema to store detailed data from the main data more structured. 
+<img alt='elt' src='assets/Mart Schema.png' />
+
+| Table Name | Description |
+|-----------|-------------|
+| **bridge_job_industry** | - |
+| **bridge_job_type** | - |
+| **dim_company** | Consists detail company that offer the job |
+| **dim_date** | Consists detail information time of job posted |
+| **dim_industry** | Consists detail information of job industry |
+| **dim_job_level** | Include level  |
+| **dim_job_type** | Include detail type of job information |
+| **dim_location** | Include detail location of job |
+| **dim_salary** | Include detail information of job salary |
+| **fact_remote_jobs** | Consists general information about remote job |
+
+### 📊 Analytics Schema
+
+🛠️ **This scheme is under developing**
 
 ## 📂 Project Structure
 
