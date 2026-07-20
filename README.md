@@ -102,6 +102,9 @@ project/
 | **sql/** | Contains SQL scripts for database creation, schema definitions, views, and ETL queries. |
 | **dashboard/** | Includes Power BI reports (`.pbix`) and any supporting dashboard assets. |
 
+## Visualization
+As the product of data analytics, I use Microsoft Power BI as visualization tool. The visualization that i made was focused on analysis the average salary by various factor (including job type, industry, and by company)
+<img alt='elt' src='assets/dashboard.png' />
 
 ## Credit
 Developed by Ibrahim Mumtaz Samadikun. Data & Analytics Enthusiast
