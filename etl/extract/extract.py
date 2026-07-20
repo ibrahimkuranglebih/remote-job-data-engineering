@@ -17,6 +17,7 @@ industry = [
     'project-management', 'engineering', 'dev', 'qa-testing'
 ]
 
+
 BASE_URL = 'https://jobicy.com/api/v2/remote-jobs'
 
 def extract_jobs():
