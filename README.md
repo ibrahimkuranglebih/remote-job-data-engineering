@@ -120,5 +120,5 @@ Developed by Ibrahim Mumtaz Samadikun. Data & Analytics Enthusiast
 [Apache-Airflow-Logo]:https://img.shields.io/badge/Apache_Airflow-017CEE?logo=apacheairflow&logoColor=ffffff
 [Python-Logo]:https://img.shields.io/badge/Python-FBEF76?logo=python&logoColor=ffffff
 [Postgres-Logo]:https://img.shields.io/badge/Postgres-4169E1?logo=postgresql&logoColor=ffffff
-[Version-Shield]:https://img.shields.io/badge/Version-1.2-blue
+[Version-Shield]:https://img.shields.io/badge/Version-2.0-blue
 [Linkedin-Logo]: https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=ffffff
