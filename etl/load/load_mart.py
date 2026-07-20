@@ -28,8 +28,8 @@ def _upsert_dim_company(conn, companies):
     """
     values = [(c["company_name"], c["company_logo"]) for c in companies]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)  # <-- ambil return value
+        for row in rows:
             lookup[row[1]] = row[0]
     return lookup
 
@@ -46,8 +46,8 @@ def _upsert_dim_location(conn, locations):
     """
     values = [(l["country"], l["region"]) for l in locations]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)
+        for row in rows:
             lookup[(row[1], row[2])] = row[0]
     return lookup
 
@@ -65,8 +65,8 @@ def _upsert_dim_salary(conn, salaries):
     """
     values = [(s["salary_currency"], s["salary_period"], s["salary_min"], s["salary_max"]) for s in salaries]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)
+        for row in rows:
             lookup[(row[1], row[2], row[3], row[4])] = row[0]
     return lookup
 
@@ -83,8 +83,8 @@ def _upsert_dim_level(conn, levels):
     """
     values = [(l["job_level"],) for l in levels]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)
+        for row in rows:
             lookup[row[1]] = row[0]
     return lookup
 
@@ -101,8 +101,8 @@ def _upsert_dim_industry(conn, industry_names):
     """
     values = [(name,) for name in industry_names]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)
+        for row in rows:
             lookup[row[1]] = row[0]
     return lookup
 
@@ -119,8 +119,8 @@ def _upsert_dim_job_type(conn, job_type_names):
     """
     values = [(name,) for name in job_type_names]
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)
+        for row in rows:
             lookup[row[1]] = row[0]
     return lookup
 
@@ -189,16 +189,19 @@ def _upsert_facts(conn, facts, company_lu, location_lu, salary_lu, level_lu, dat
 
     job_key_lookup = {}
     with conn.cursor() as cur:
-        execute_values(cur, sql, values, fetch=True)
-        for row in cur.fetchall():
+        rows = execute_values(cur, sql, values, fetch=True)   # <-- FIX: ambil return value
+        for row in rows:
             job_key_lookup[row[1]] = row[0]
     return job_key_lookup
 
 
 def _load_bridge(conn, table, fk_col, job_key_lookup, job_map, dim_lookup):
+    # normalisasi key job_key_lookup jadi string agar sama dengan job_map (hasil deserialize XCom JSON)
+    job_key_lookup_str = {str(k): v for k, v in job_key_lookup.items()}
+
     rows = []
     for job_id, names in job_map.items():
-        job_key = job_key_lookup.get(job_id)
+        job_key = job_key_lookup_str.get(str(job_id))
         if job_key is None:
             continue
         for name in names:

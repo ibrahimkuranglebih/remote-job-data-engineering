@@ -103,7 +103,6 @@ project/
 | **sql/** | Contains SQL scripts for database creation, schema definitions, views, and ETL queries. |
 | **dashboard/** | Includes Power BI reports (`.pbix`) and any supporting dashboard assets. |
 
-[Version-Shield]:https://img.shields.io/badge/Version-1.0-blue
 
 <!--Markdown Links & Images-->
 <!--Url-->

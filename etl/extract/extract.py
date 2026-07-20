@@ -6,7 +6,7 @@ geo = [
     "australia", "uk", "usa", "china", "france", "germany", "italy", "japan", "netherlands", "singapore", "south-korea", "switzerland","united-arab-emirates",
 ]
 # total jobs per country / region with spesific industry selected
-count = 3
+count = 1
 # industry field that available in the API response
 industry = [
     'admin-support', 'copywriting', 'supporting',
