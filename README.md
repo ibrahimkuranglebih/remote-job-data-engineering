@@ -1,6 +1,5 @@
 # Remote Job Analytics (Data Engineering Project) 
 ![Version][Version-Shield]
-Author
 
 ## Project Overview
 Struggling to find a job will be the most problem for the job seeker, even it's intern or profesional job. From students to experienced worker, they faced the same problem. This project will provide job seeker to analyze the job market and find perfect job for them. 
@@ -104,16 +103,23 @@ project/
 | **dashboard/** | Includes Power BI reports (`.pbix`) and any supporting dashboard assets. |
 
 
+## Credit
+Developed by Ibrahim Mumtaz Samadikun. Data & Analytics Enthusiast
+
+[![LinkedIn][Linkedin-Logo]][Linkedin-Url]
+
 <!--Markdown Links & Images-->
 <!--Url-->
 [Docker-Url]:https://www.docker.com/
 [Apache-Airflow-Url]:https://airflow.apache.org/
 [Python-Url]:https://www.python.org/
 [Postgres-Url]:https://www.postgresql.org/
-[Version-Url]:https://github.com/ibrahimkuranglebih/Football-Data-Pipeline-12-Leagues?tab=readme-ov-file
+[Version-Url]:https://github.com/ibrahimkuranglebih/remote-job-data-engineering.git
+[Linkedin-Url]:https://linkedin.com/in/ibrahimmumtaz/
 <!--Logo-->
 [Docker-Logo]:https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=ffffff
 [Apache-Airflow-Logo]:https://img.shields.io/badge/Apache_Airflow-017CEE?logo=apacheairflow&logoColor=ffffff
 [Python-Logo]:https://img.shields.io/badge/Python-FBEF76?logo=python&logoColor=ffffff
 [Postgres-Logo]:https://img.shields.io/badge/Postgres-4169E1?logo=postgresql&logoColor=ffffff
-[Version-Shield]:https://img.shields.io/badge/Version-1.2-blue
+[Version-Shield]:https://img.shields.io/badge/Version-2.0-blue
+[Linkedin-Logo]: https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=ffffff
